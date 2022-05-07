@@ -1,5 +1,7 @@
 #include <stdlib.h>
 #include <time.h>
+#include <stdio.h>
+
 /**
  * main - assigns a random number to a variable and prints it
  *
@@ -9,24 +11,29 @@
 int main(void)
 {
 	int n;
+	char *str;
+	int rem;
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
+	rem = (n % 10);
 
-	if (n > 0)
+	if (rem > 5)
 	{
-		printf("%d is positive\n", n)
+		str = "and is greater than 5";
 	}
 
-	else if (n == 0)
+	else if (rem == 0)
 	{
-		printf("%d is zero\n", n)
+		str = "and is 0";
 	}
 
-	else if (n < 0)
+	else if (rem < 6 && rem != 0)
 	{
-		printf("%d is negative\n", n)
+		str = "and is less than 6 and not 0";
 	}
+
+	printf("Last digit of %d is %d %s\n", n, rem, str);
 
 	return (0);
 }
