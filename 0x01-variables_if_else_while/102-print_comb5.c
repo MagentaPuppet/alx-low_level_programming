@@ -28,16 +28,16 @@ int main(void)
 
 					if (num1 < num2)
 					{
-						putchar(i);
-						putchar(j);
+					putchar(i);
+					putchar(j);
+					putchar(' ');
+					putchar(k);
+					putchar(l);
+					if (num1 < 98)
+					{
+						putchar(',');
 						putchar(' ');
-						putchar(k);
-						putchar(l);
-						if (num1 < 98)
-						{
-							putchar(',');
-							putchar(' ');
-						}
+					}
 					}
 				}
 			}
