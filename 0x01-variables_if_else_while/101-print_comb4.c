@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - prints different combinations of two digits seperated by a comma
+ * main - prints different combinations of three digits seperated by a comma
  *
  * Return: Always 0 (Success)
  */
