@@ -2,6 +2,7 @@
 
 /**
  * main - prints different combinations of two sets of two digits
+ 
  * Return: Always 0 (Success)
  */
 
