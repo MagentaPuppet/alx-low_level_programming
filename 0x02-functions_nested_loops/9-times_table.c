@@ -15,37 +15,38 @@ void times_table(void)
 		{
 			k = i * j;
 			unit = (k % 10) + 48;
-			tens = ((k - (k % 10))/10) + 48;
-			comma = ',';
-			space = ' ';
-
-
-			if (k >= 10)
+			tens = ((k - (k % 10)) / 10) + 48;
+			if (k < 10 && j != 0 && j != 9)
 			{
-				if (j == 9)
-				{
-					comma = '\0';
-				}
+				_putchar(' ');
+				_putchar(' ');
+				_putchar(unit);
+				_putchar(',');
 			}
-			else
+			else if (j == 9 && k < 10)
 			{
-				tens = ' ';
-				if (j == 9)
-				{
-					comma = '\0';
-				}
-
-				if (j == 0)
-				{
-					space = '\0';
-					tens = '\0';
-				}
+				_putchar(' ');
+				_putchar(' ');
+				_putchar(unit);
 			}
-
-			_putchar(space);
-			_putchar(tens);
-			_putchar(unit);
-			_putchar(comma);
+			else if (k >= 10 && j != 9)
+			{
+				_putchar(' ');
+				_putchar(tens);
+				_putchar(unit);
+				_putchar(',');
+			}
+			else if (j == 9 && k >= 10)
+			{
+				_putchar(' ');
+				_putchar(tens);
+				_putchar(unit);
+			}
+			else if (j == 0)
+			{
+				_putchar(unit);
+				_putchar(',');
+			}
 		}
 		_putchar('\n');
 	}
