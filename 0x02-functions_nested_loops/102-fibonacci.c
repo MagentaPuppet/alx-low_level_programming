@@ -15,7 +15,7 @@ int main(void)
 	printf("%ld, ", sum);
 	count = 1;
 
-	for (i = 2; count < 50;)
+	for (i = 2; count < (50 - 1);)
 	{
 		temp = i;
 		printf("%ld, ", i);
