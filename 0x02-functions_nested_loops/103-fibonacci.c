@@ -9,35 +9,22 @@
 
 int main(void)
 {
-	unsigned long int sum, i, temp, count;
+	unsigned long int fib_sum, i, temp, total;
 
-	sum = 1;
-	printf("%ld, ", sum);
-	count = 1;
+	fib_sum = 1;
+	total = 0;
 
 	for (i = 2; i <= 4000000;)
 	{
 		temp = i;
 		if (i % 2 == 0)
 		{
-			printf("%ld", i);
-			if (i + sum > 4000000)
-			{
-				printf("\n");
-			}
-			else
-			{
-				printf(", ");
-			}
+			total += i;
 		}
-		i += sum;
-		sum = temp;
-		count++;
+		i += fib_sum;
+		fib_sum = temp;
 	}
-	if (i % 2 == 0)
-	{
-		printf("%ld\n", i);
-	}
+	printf("%ld\n", total);
 
 	return (0);
 }
