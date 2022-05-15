@@ -4,7 +4,7 @@
 #include <ctype.h>
 
 /**
- * main - Program that adds two positive integers
+ * main - Program that adds positive numbers
  * @argc: Number of elements in argv
  * @argv: Array of strings passed as arguments
  *
