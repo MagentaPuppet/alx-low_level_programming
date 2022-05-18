@@ -11,6 +11,7 @@
 char *create_array(unsigned int size, char c)
 {
 	char *ar;
+	int i = 0;
 
 	if (size == 0)
 	{
@@ -19,7 +20,10 @@ char *create_array(unsigned int size, char c)
 	else
 	{
 		ar = malloc(size * sizeof(*ar));
-		ar[0] = c;
+		for (i = 0; i < size; ++i)
+		{
+			ar[i] = c;
+		}
 		return (ar);
 	}
 }
