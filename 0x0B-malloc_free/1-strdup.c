@@ -25,6 +25,7 @@ char *_strdup(char *str)
 		}
 
 		strcpy = malloc((length + 1) * sizeof(char));
+		/*length + 1 to accomodate for the '\0' char*/
 
 		if (strcpy == NULL)
 		{
