@@ -10,7 +10,7 @@
 
 char *_strdup(char *str)
 {
-	int i, length = 0;
+	int i, j, length = 0;
 	char *strcpy;
 
 	if (str == NULL)
@@ -32,11 +32,11 @@ char *_strdup(char *str)
 		}
 		else
 		{
-			i = 0;
-			while (i < length)
+			j = 0;
+			while (j < length)
 			{
-				*(strcpy + i) = *(str + i);
-				++i;
+				*(strcpy + j) = *(str + j);
+				++j;
 			}
 
 			return (strcpy);
