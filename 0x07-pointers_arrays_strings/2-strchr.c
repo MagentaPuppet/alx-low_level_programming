@@ -3,9 +3,8 @@
 /**
  * _strchr - locates a character in a string
  *
- * @dest: pointer to area of memory to be filled
- * @src: pointer to area of memory to be copied from
- * @n: number of bytes from the starting byte to be filled
+ * @s: pointer to area of memory to be searched
+ * @c: character to be located
  * Return: Pointer to the first occurence of character "c"
  * in the string "s", NULL otherwise
  */
@@ -15,7 +14,6 @@ char *_strchr(char *s, char c)
 	unsigned int i = 0;
 	unsigned int j = 0;
 	unsigned int len = 0;
-	char *tmp;
 
 	while (*(s + i) != '\0')
 	{
@@ -30,5 +28,5 @@ char *_strchr(char *s, char c)
 			return (s + j);
 		}
 	}
-	return NULL;
+	return (NULL);
 }
