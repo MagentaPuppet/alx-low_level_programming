@@ -33,7 +33,6 @@ unsigned int _strspn(char *s, char *accept)
 {
 	unsigned int i = len(accept);
 	unsigned int j, k, count = 0;
-	char *tmp;
 
 	for (j = 0; j < len(s); j++)
 	{
@@ -52,9 +51,6 @@ unsigned int _strspn(char *s, char *accept)
 				}
 			}
 		}
-		else
-		{
-			return (count);
-		}
 	}
+	return (count);
 }
