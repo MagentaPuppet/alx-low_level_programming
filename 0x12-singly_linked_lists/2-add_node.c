@@ -29,16 +29,15 @@ unsigned int len(char *str)
 list_t *add_node(list_t **head, const char *str)
 {
 	list_t *temp;
-	char *string = strdup(str);
 
 	temp = malloc(sizeof(list_t));
-	if (!temp || !string)
+	if (!temp)
 	{
 		return (NULL);
 	}
 
-	temp->str = string;
-	temp->len = len(string);
+	temp->str = strdup(str);
+	temp->len = len(temp->str);
 
 	temp->next = *head;
 	*head = temp;
